@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/js3.css">
+    <script src="js/js3.js"></script>
+</head>
+<body>
+    <div class="div1"> 
+        <h1>La Tartaleta  Restaurante & Bistro tiene promoción de descuento pot la compra de pan Baguete , si un cliente compra 20 unidades de pan se aplica el 20% off. Si compra de de 16 a 19 unidades se aplica el 15% off. Si la cantidad comprada es mayor de unidades se aplica el 25% off. Si es de 6 a 15 unidades se aplica el 10%, el precio del Baguete es de $1.25 y como cortesia se regala un latte.Mostrar el detalle del precio, descuento, total y cortesia.</h1>
+        <form action="">
+            <label for="">numero de unidades</label>
+            <input type="text" id="unidad">
+            <br>
+            <button type="button" onclick="comprar()">comprar</button>
+        </form>
+    </div>
+
+    <script>
+        function comprar(){
+    var unidad = parseInt(document.getElementById("unidad").value);
+    var descuento = 0;
+    var precio = 1.25;
+    var cortesia = " 1 latte "
+
+    if(unidad >= 6 && unidad <=15){
+        descuento = 0.10
+        precioinicial = unidad * precio;
+        descuento = precioinicial * descuento;
+        total = precioinicial - descuento;
+
+        alert("numero de unidades : " + unidad + "\nprecio por unidad: $" + precio + "\nprecio inicial: $" + precioinicial.toFixed(2) + "\nEl descuento es: $" + descuento.toFixed(2) + "\nTotal a pagar: $" + total.toFixed(2) + "\nLa cortesia es: " + cortesia)
+    }
+
+    if(unidad >= 16 && unidad <=19){
+        descuento = 0.15
+        precioinicial = unidad * precio;
+        descuento = precioinicial * descuento;
+        total = precioinicial - descuento;
+
+        alert("numero de unidades : " + unidad + "\nprecio por unidad: $" + precio + "\nprecio inicial: $" + precioinicial.toFixed(2) + "\nEl descuento es: $" + descuento.toFixed(2) + "\nTotal a pagar: $" + total.toFixed(2) + "\nLa cortesia es: " + cortesia)
+    }
+
+    if(unidad == 20){
+        descuento = 0.20
+        precioinicial = unidad * precio;
+        descuento = precioinicial * descuento;
+        total = precioinicial - descuento;
+
+        alert("numero de unidades : " + unidad + "\nprecio por unidad: $" + precio + "\nprecio inicial: $" + precioinicial.toFixed(2) + "\nEl descuento es: $" + descuento.toFixed(2) + "\nTotal a pagar: $" + total.toFixed(2) + "\nLa cortesia es: " + cortesia)
+    }
+
+    if(unidad > 20){
+        descuento = 0.25
+        precioinicial = unidad * precio;
+        descuento = precioinicial * descuento;
+        total = precioinicial - descuento;
+
+        alert("numero de unidades : " + unidad + "\nprecio por unidad: $" + precio + "\nprecio inicial: $" + precioinicial.toFixed(2) + "\nEl descuento es: $" + descuento.toFixed(2) + "\nTotal a pagar: $" + total.toFixed(2) + "\nLa cortesia es: " + cortesia)
+    }
+
+}
+    </script>
+</body>
+</html>
